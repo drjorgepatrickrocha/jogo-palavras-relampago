@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palavras-Relâmpago</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game">
+    <header>
+      <h1>⚡ Palavras-Relâmpago</h1>
+      <div class="stats">
+        <div class="stat"><span class="label">Pontos</span><span id="score">0</span></div>
+        <div class="stat"><span class="label">Combo</span><span id="combo">0</span></div>
+        <div class="stat"><span class="label">Recorde</span><span id="best">0</span></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="timer-bar"><div id="timer-fill"></div></div>
+
+      <div id="scrambled" class="scrambled">TOQUE PARA COMEÇAR</div>
+
+      <input id="answer" type="text" autocomplete="off" placeholder="Digite a palavra..." disabled>
+
+      <div id="feedback" class="feedback"></div>
+
+      <button id="start-btn">Começar</button>
+    </main>
+
+    <footer>
+      <p>Desembaralhe a palavra antes que o tempo acabe. Acertos seguidos aumentam seu combo!</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
