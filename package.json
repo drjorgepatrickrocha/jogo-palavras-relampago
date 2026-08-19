@@ -1,0 +1,9 @@
+{
+  "name": "jogo-palavras-relampago",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Um joguinho rápido de desembaralhar palavras contra o tempo.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

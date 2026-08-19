@@ -30,35 +30,12 @@ let usedWords = [];
 
 bestEl.textContent = best;
 
-function scramble(word) {
-  let letters = word.split("");
-  let scrambled = word;
-  let attempts = 0;
-  while (scrambled === word && attempts < 20) {
-    for (let i = letters.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [letters[i], letters[j]] = [letters[j], letters[i]];
-    }
-    scrambled = letters.join("");
-    attempts++;
-  }
-  return scrambled;
-}
-
 function pickWord() {
   if (usedWords.length >= WORDS.length) usedWords = [];
   let candidates = WORDS.filter(w => !usedWords.includes(w));
   const word = candidates[Math.floor(Math.random() * candidates.length)];
   usedWords.push(word);
   return word;
-}
-
-function normalize(str) {
-  return str
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .trim();
 }
 
 function startRound() {

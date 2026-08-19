@@ -28,4 +28,13 @@ python3 -m http.server
 
 - `index.html` — marcação da página e dos elementos do jogo.
 - `style.css` — visual e animações.
-- `script.js` — lógica do jogo (sorteio de palavras, embaralhamento, pontuação, cronômetro).
+- `logic.js` — funções puras (embaralhar, normalizar texto) compartilhadas entre o jogo e os testes.
+- `script.js` — lógica do jogo (sorteio de palavras, pontuação, cronômetro), usa as funções de `logic.js`.
+
+## Testes
+
+Os testes cobrem as funções puras de `logic.js` e o botão de feedback, usando o test runner nativo do Node (sem dependências):
+
+```bash
+npm test
+```
